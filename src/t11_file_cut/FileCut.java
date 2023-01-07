@@ -17,10 +17,9 @@ public class FileCut {
             FileOutputStream outputStream1 = new FileOutputStream(fileName2);
             )
         {
-            int byteContent = 0;
-            int fileCut = (inputStream.available() +1) /2;
+            int halfFile = (inputStream.available() +1) /2;
             while(inputStream.available() > 0){
-                if (fileCut > inputStream.available()){
+                if (halfFile > inputStream.available()){
                     outputStream.write(inputStream.read());
                 }else {
                     outputStream1.write(inputStream.read());
